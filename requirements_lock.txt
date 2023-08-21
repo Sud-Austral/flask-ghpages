@@ -17,4 +17,3 @@ nltk
 numpy
 tflearn
 tensorflow
-pickle
