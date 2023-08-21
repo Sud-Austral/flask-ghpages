@@ -4,15 +4,16 @@ __all__ = ["create_app"]
 
 
 def create_app():
-    app = Flask.Flask(__name__)
+    app = Flask(__name__)
     app.config.from_pyfile('settings.py')
 
-    @app.route("/")
-    def index():
+    @app.route("/<name>")
+    def index(name):
         #return "hello world"
         data = {
         "message": "Hello, world!",
-        "status": "success"
+        "status": "success",
+        "name": name
         }
         return jsonify(data)
 
