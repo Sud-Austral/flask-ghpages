@@ -28,8 +28,8 @@ jobs:
 
       - name: Freeze
         run: |
-        python -m pip install --upgrade tensorflow
-        python freeze.py
+          python -m pip install --upgrade tensorflow
+          python freeze.py
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.4
