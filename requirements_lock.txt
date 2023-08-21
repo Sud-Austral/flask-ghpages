@@ -17,4 +17,4 @@ nltk
 numpy
 nest
 tflearn
-tensorflow
+tensorflow==2.2.1
