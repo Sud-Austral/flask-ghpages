@@ -1,4 +1,14 @@
 from flask import Flask, jsonify
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
+import numpy
+import tflearn
+import tensorflow
+import json
+import random
+import pickle
+nltk.download('punkt')
 
 __all__ = ["create_app"]
 
@@ -16,7 +26,7 @@ def create_app():
         }
         return jsonify(data)
     
-    @app.route("/greed")
+    @app.route("/greed/")
     @app.route("/greed/<name>")
     def greed(name="stranger"):
         #return "hello world"
