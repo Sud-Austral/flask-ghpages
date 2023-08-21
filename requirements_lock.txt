@@ -17,6 +17,4 @@ nltk
 numpy
 tflearn
 tensorflow
-json
-random
 pickle
