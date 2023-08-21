@@ -7,7 +7,7 @@ on:
 jobs:
   freeze-and-deploy:
     # Do not attempt to deploy website on forks
-    if: github.repository_owner == 'vadyushkins'
+    #if: github.repository_owner == 'vadyushkins'
     runs-on: ubuntu-latest
     strategy:
       matrix:
