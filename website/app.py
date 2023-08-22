@@ -32,11 +32,10 @@ def create_app():
     @app.route("/greed/")
     @app.route("/greed/<name>")
     def greed(name="stranger"):
-        #return "hello world"
         data = {
-        "message": "Hello, world!",
-        "status": "success",
-        "name": name
+            "message": "Hello, world!",
+            "status": "success",
+            "name": name
         }
         return jsonify(data)
 
