@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify,request
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
@@ -30,8 +30,10 @@ def create_app():
         return jsonify(data)
     
     @app.route("/greed/")
-    @app.route("/greed/<name>")
-    def greed(name="stranger"):
+    #@app.route("/greed/<name>")
+    #def greed(name="stranger"):
+    def greed():
+        name = request.args.get("name", "stranger")
         data = {
             "message": "Hello, world!",
             "status": "success",
