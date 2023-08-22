@@ -10,8 +10,8 @@ import random
 import pickle
 nltk.download('punkt')
 
-with open("variables.pickle","rb") as archivoPickle: 
-  palabras, tags, entrenamiento, salida = pickle.load(archivoPickle)
+#with open("variables.pickle","rb") as archivoPickle: 
+#  palabras, tags, entrenamiento, salida = pickle.load(archivoPickle)
 
 __all__ = ["create_app"]
 
